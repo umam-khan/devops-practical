@@ -1,0 +1,22 @@
+pipeline {
+agent any
+stages {
+stage('Checkout') {
+steps {
+// Replace 'your repo link here' with your actual repository URL
+git branch: 'main', url: 'your repo link here'
+}
+}
+stage('Build') {
+steps {
+echo 'Building...'
+}
+}
+stage('Deploy') {
+steps {
+echo 'Deploying...'
+bat "xcopy /Y /I /E /F /C *.html C:\\xampp\\htdocs\\"
+}
+}
+}
+}
