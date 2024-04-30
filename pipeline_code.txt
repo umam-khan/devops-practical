@@ -3,8 +3,7 @@ agent any
 stages {
 stage('Checkout') {
 steps {
-// Replace 'your repo link here' with your actual repository URL
-git branch: 'main', url: 'your repo link here'
+git branch: 'main', url: 'https://github.com/umam-khan/devops-practical'
 }
 }
 stage('Build') {
